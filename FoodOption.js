@@ -1,0 +1,13 @@
+import { imageGridCards } from "./utils/FoodData";
+import FoodCard from "./FoodCard";
+export default function FoodOption(){
+ return(
+    <>
+   <div className="w-[80%] conatiner mx-auto flex flex-wrap mt-20 gap-3" >
+    {
+        imageGridCards.map((foodData)=><FoodCard key={foodData.id} foodData={foodData}></FoodCard>)
+    }
+   </div>
+    </>
+ )
+}
